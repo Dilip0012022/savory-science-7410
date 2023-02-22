@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AiF@shion® Customized | British Luxury</title>
+    <link rel="icon" href="./icons/Ai@FashionLogo.png" type="image/png" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        overflow-y: scroll;
+      }
+      #nav {
+        width:100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+      }
+      #nav-first {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+        margin-left: 4%;
+        align-items: center;
+      }
+      #nav-second {
+        width: 10%;
+        margin-right: 4%;
+      }
+      #nav-second > ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+      }
+      #nav-second > ul > li > button > img {
+        width: 30px;
+        height: 30px;
+      }
+      #nav-logo {
+        height: 140px;
+        width: 140px;
+      }
+      #nav-search-logo {
+        background-color: white;
+        border: 0px solid red;
+      }
+      #nav-list {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+      #nav-list > a {
+        text-decoration: none;
+      }
+      video {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: transparent;
+      }
+      a {
+        color: rgb(14, 180, 180);
+        text-decoration: none;
+      }
+      #mid-section>div:nth-child(1){
+        width: 100%;
+        display: flex;
+      }
+      #mid-section>div:nth-child(1)>div{
+        width:50%;
+      }
+      #mid-section>div:nth-child(1)>div>a>img{
+        width:100%;
+      }
+      #mid-section>div:nth-child(2){
+        width:100%;
+      }
+      #mid-section>div:nth-child(2)>div{
+        width:100%;
+      }
+      #mid-section>div:nth-child(2)>div>a>img{
+        width:100%;
+      }
+      #mid-section>div:nth-child(3){
+        width:100%;
+      }
+      #mid-section>div:nth-child(3)>div{
+        width:100%;
+      }
+      #mid-section>div:nth-child(3)>div>a>img{
+        width:100%;
+      }
+      #last-section{
+        width:100%;
+        height:400px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #last-section>a{
+        color:black;
+        margin-bottom: 10px;
+      }
+      #last-section>a>h1{
+        font-weight: 500;
+      }
+      hr{
+        width:100%;
+        border:1px solid teal;
+        margin-bottom: 20px;
+      }
+      #footer{
+        width:100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 40px;
+      }
+      #footer a{
+        color:black;
+      }
+      #footer h3{
+        font-weight: 200;
+      }
+      #footer>div{
+        width:22%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      #footer>div:nth-child(1)>a>h3{
+        margin-bottom: 20px;
+      }
+      #footer>div:nth-child(1)>p{
+        line-height: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      #footer>div:nth-child(1)>input{
+        margin-bottom: 20px;
+        border:0px solid red;
+        border-bottom:1px solid black;
+        font-size: 16px;
+        width:100%;
+        padding-bottom: 8px;
+      }
+      #footer>div:nth-child(2)>a>h3{
+        margin-bottom: 30px;
+        padding-left: 12px;
+      }
+      #footer>div:nth-child(3){
+        margin-left: 20px;
+      }
+      #footer>div:nth-child(3)>a>h3{
+        margin-bottom: 30px;
+      }
+      #footer>div:nth-child(4)>a>h3{
+        margin-bottom: 20px;
+      }
+      #footer>div:nth-child(4)>p{
+        margin-bottom: 50px;
+        font-weight:lighter;
+      }
+      #last-p{
+        margin-left:50px;
+        margin-bottom: 40px;
+        color: teal;
+      }
+      #last-p>a{
+        text-decoration:underline;
+      }
+      </style>
+  </head>
+  <body>
+      <!-- Navigation Bar-->
+    <div id="nav">
+      <div id="nav-first">
+          <div>
+          <a href="http://127.0.0.1:5500/index.html"><h1>AiF@shion</h1></a>
+        </div>
+        <div id="nav-list">
+          <a href="">GIFTS</a>
+          <a href="">NEW IN</a>
+          <a href="">WOMEN</a>
+          <a href="">MEN</a>
+          <a href="">CHILDREN</a>
+          <a href="">OUTERWEAR</a>
+          <a href="">BAGS</a>
+          <a href="">STORIES</a>
+          <a href="">VALUES</a>
+        </div>
+      </div>
+      <div id="nav-second">
+        <ul>
+          <li>
+            <button>
+              <img
+                id="nav-search-logo"
+                src="./icons/icons8-search-100.png"
+                alt="Error"
+              />
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./icons/icons8-account-64.png" alt="Error" />
+            </button>
+        </li>
+          <li>
+            <button>
+              <img src="./icons/icons8-shopping-bag-100.png" alt="Error" />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <video width="100%" height="" autoplay muted loop>
+        <source src="./video/video_2023-02-22_14-22-41.mp4" type="video/mp4" />
+    </video>
+    <div id="mid-section">
+        <div>
+            <div>
+                <a href="#">
+                    <img src="https://assets.burberry.com/is/image/Burberryltd/6EB7BB45-E6DF-4A04-A268-5146FF805CE3?wid=1200" alt="#">
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <img src="https://assets.burberry.com/is/image/Burberryltd/B16DA97B-71C9-4933-9EF6-EDFEC5C8C5DC?wid=1200" alt="#">
+                </a>
+            </div>
+        </div>
+        <div>
+            <div>
+                <a href="#">
+                    <img src="https://assets.burberry.com/is/image/Burberryltd/2AFA0CCD-EC75-4E36-9CC9-79B3133A3607?wid=1366" alt="#">
+                </a>
+            </div>
+        </div>
+        <div>
+            <div>
+                <a href="#">
+                    <img src="https://assets.burberry.com/is/image/Burberryltd/513CC023-678E-4793-925E-CEE0067DF98E?wid=1366" alt="#">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="last-section">
+        <a href="#"><h1>CHILDREN</h1></a>
+        <a href="#"><h1>THE TRENCH COAT</h1></a>
+        <a href="#"><h1>SCARVES</h1></a>
+    </div>
+
+    <!-- Footer-section -->
+    <hr>
+    <div id="footer">
+        <div>
+            <a href="#"><h3>SIGN UP</h3></a>
+            <p>Sign up below for updates about the world of AiF@shion, including collection launches and early access to limited-edition products and collaborations.</p>
+            <input type="email" placeholder="Email">
+        </div>
+        <div>
+            <a href="#"><h3>STORE LOCATOR</h3></a>
+            <a href="#"><h3>DOWNLOAD OUR APP</h3></a>
+            <a href="#"><h3>BOOK AN APPOINTMENT</h3></a>
+        </div>
+        <div>
+            <a href="#"><h3>CUSTOMER SERVICE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;</h3></a>
+            <a href="#"><h3>LEGAL & COOKIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;</h3></a>
+            <a href="#"><h3>FOLLOW US&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;</h3></a>
+            <a href="#"><h3>OUR COMPANY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;</h3></a>
+        </div>
+        <div>
+            <a href="#"><h3>LANGUAGE</h3></a>
+            <p>English</p>
+            <a href="#"><h3>SHIPPING TO</h3></a>
+            <p>United States ($)</p>
+        </div>
+    </div>
+    <hr>
+    <p id="last-p">If you are using a screen-reader and are having problems using this website, please call <a href="#">+1877 217 4085</a> or <a href="#">contact us</a> for assistance</p>
+</body>
+</html>
