@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AiF@shion® Customized | British Luxury</title>
+    <link rel="icon" href="./icons/Ai@FashionLogo.png" type="image/png" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        overflow-y: scroll;
+      }
+      /* Navigation Bar CSS Start */
+      #brand-logo {
+        height: 140px;
+        width: 140px;
+        padding: 0px;
+        margin: 0px;
+      }
+      #nav {
+        width: 100%;
+        /* position: sticky; */
+        /* top: 0; */
+        /* left: 0; */
+        /* z-index: 1; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* margin-top: 40px; */
+      }
+      #nav-first {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+        margin-left: 4%;
+        align-items: center;
+      }
+      #nav-second {
+        width: 10%;
+        margin-right: 4%;
+      }
+      #nav-second > ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+      }
+      #nav-second > ul > li > button > img {
+        width: 30px;
+        height: 30px;
+      }
+      #nav-logo {
+        height: 140px;
+        width: 140px;
+      }
+      #nav-search-logo {
+        background-color: white;
+        border: 0px solid red;
+      }
+      #nav-list {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+      #nav-list > a {
+        text-decoration: none;
+      }
+      a {
+        /* color: rgb(14, 180, 180); */
+        color: black;
+        text-decoration: none;
+      }
+      /* Navigation Bar CSS End */
+      #top-section-product-page {
+        width: 25%;
+        margin: auto;
+        margin-top: 20px;
+        text-align: center;
+      }
+      #top-section-product-page > h3 {
+        margin-bottom: 15px;
+      }
+      #top-section-product-page > p {
+        line-height: 24px;
+      }
+      #sorting-section {
+        width: 100%;
+        border: 0px;
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        height: 40px;
+        border-top: 1px solid teal;
+        border-bottom: 1px solid teal;
+      }
+      #sorting-icon {
+        height: 40px;
+        margin-left: 30px;
+      }
+      #sorting-icon > img {
+        height: 40px;
+      }
+      hr.vertical-line1 {
+        border: none;
+        border-left: 2px solid teal;
+        height: 5vh;
+        margin-left: 20px;
+      }
+      #sort-by-sort-method {
+        border: none;
+        font-size: 16px;
+        margin-left: 20px;
+        padding: 6px 12px;
+      }
+      hr.vertical-line2 {
+        border: none;
+        border-left: 2px solid teal;
+        height: 3vh;
+        margin-left: 20px;
+      }
+      #sorting-section > h4 {
+        margin-left: 30px;
+        font-weight: 300;
+        font-size: 18px;
+      }
+      #product-display {
+        width:100%;
+        margin:auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin-top: 100px;
+        text-align: center;
+      }
+      #product-display>div>img{
+        width:100%;
+      }
+      #product-display>div>h4{
+        margin-top:10px;
+      }
+      #product-display>div>p{
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      #product-display>div>h4:nth-child(3){
+        color:red;
+        font-weight: 100;
+      }
+      #product-display>div>p{
+        color:teal;
+      }
+      .hr-first{
+        width:100%;
+        border:0.5px solid teal;
+        border-bottom: 0px;
+        margin-top:50px;
+        margin-bottom: 40px;
+      }
+      #bottom-section{
+        width:100%;
+        height:400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #bottom-section>a>h2{
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+      .hr-second{
+        width:100%;
+        border:0.5px solid teal;
+        border-bottom: 0px;
+        margin-top:50px;
+        margin-bottom: 40px;
+      }
+      #last-section{
+        width:100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #last-section>h4{
+        margin-bottom: 20px;
+      }
+      #last-div{
+        display: flex;
+      }
+      #last-div>p{
+        margin-left: 10px;
+      }
+      /* Footer CSS */
+      #footer{
+        width:100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 40px;
+      }
+      #footer a{
+        color:black;
+      }
+      #footer h3{
+        font-weight: 200;
+      }
+      #footer>div{
+        width:22%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      #footer>div:nth-child(1)>a>h3{
+        margin-bottom: 20px;
+      }
+      #footer>div:nth-child(1)>p{
+        line-height: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      #footer>div:nth-child(1)>input{
+        margin-bottom: 20px;
+        border:0px solid red;
+        border-bottom:1px solid black;
+        font-size: 16px;
+        width:100%;
+        padding-bottom: 8px;
+      }
+      #footer>div:nth-child(2)>a>h3{
+        margin-bottom: 30px;
+        padding-left: 12px;
+      }
+      #footer>div:nth-child(3){
+        margin-left: 20px;
+      }
+      #footer>div:nth-child(3)>a>h3{
+        margin-bottom: 30px;
+      }
+      #footer>div:nth-child(4)>a>h3{
+        margin-bottom: 20px;
+      }
+      #footer>div:nth-child(4)>p{
+        margin-bottom: 50px;
+        font-weight:lighter;
+      }
+      #last-p{
+        margin-left:50px;
+        margin-bottom: 40px;
+        color: teal;
+      }
+      #last-p>a{
+        text-decoration:underline;
+        color:teal;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <div id="nav">
+      <div id="nav-first">
+        <div>
+          <a href="http://127.0.0.1:5500/index.html"
+            ><img id="brand-logo" src="./icons/Ai@FashionLogo.png" alt=""
+          /></a>
+        </div>
+        <div id="nav-list">
+          <a href="">GIFTS</a>
+          <a href="">NEW IN</a>
+          <a href="">WOMEN</a>
+          <a href="">MEN</a>
+          <a href="">CHILDREN</a>
+          <a href="">OUTERWEAR</a>
+          <a href="">BAGS</a>
+          <a href="">STORIES</a>
+          <a href="">VALUES</a>
+        </div>
+      </div>
+      <div id="nav-second">
+        <ul>
+          <li>
+            <button>
+              <img
+                id="nav-search-logo"
+                src="./icons/icons8-search-100.png"
+                alt="Error"
+              />
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./icons/icons8-account-64.png" alt="Error" />
+            </button>
+          </li>
+          <li>
+            <button>
+              <img src="./icons/icons8-shopping-bag-100.png" alt="Error" />
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Navigation Bar End -->
+    <div id="top-section-product-page">
+      <h3>ALL ACCESSORIES</h3>
+      <p>
+        Discover finishing touches from our men's accessories collection - from
+        bags and belts to scarves and wallets, elevates in Vintage Check and the
+        Thomas Burberry MonoGram.
+      </p>
+    </div>
+    <div id="sorting-section">
+      <div id="sorting-icon">
+        <img src="./icons/sorting-icon-18.jpg" />
+      </div>
+      <hr class="vertical-line1" />
+      <select id="sort-by-sort-method">
+        <option value="">SORT BY</option>
+        <option value="">Default</option>
+        <option value="">Price High</option>
+        <option value="">Price Low</option>
+      </select>
+      <hr class="vertical-line2" />
+      <h4>COLOR</h4>
+      <h4>CATEGORY</h4>
+      <h4>STYLE</h4>
+      <h4>MATERIAL</h4>
+      <h4>PERSONALISE</h4>
+    </div>
+    <div id="product-display">
+        <!-- Append fetch product data here -->
+    </div>
+    <hr class="hr-first">
+    <div id="bottom-section">
+        <a href="#"><h2>WOMEN</h2></a>
+        <a href="#"><h2>MEN</h2></a>
+        <a href="#"><h2>CHILDREN</h2></a>
+        <a href="#"><h2>GIFTING</h2></a>  
+    </div>
+    <hr class="hr-second">
+    <div id="last-section">
+        <h4>MORE FOR YOU</h4>
+        <div id="last-div">
+            <p>All Accessories</p>
+            <hr class="vertical-line2">
+            <p>Wallets & Small Leather Goods</p>
+            <hr class="vertical-line2">
+            <p>Belts</p>
+            <hr class="vertical-line2">
+            <p>Scarves</p>
+            <hr class="vertical-line2">
+            <p>Hats & Gloves</p>
+            <hr class="vertical-line2">
+            <p>Ties & Cufflinks</p>
+            <hr class="vertical-line2">
+            <p>Key Rings</p>
+            <hr class="vertical-line2">
+            <p>Eye Wear</p>
+            <hr class="vertical-line2">
+            <p>Socks</p>
+            <hr class="vertical-line2">
+            <p>Jewellery</p>
+            <hr class="vertical-line2">
+            <p>Home Accessories</p>
+        </div>
+    </div>
+    <hr class="hr-second">
+    <!-- Footer Section -->
+    <div id="footer">
+        <div>
+            <a href="#"><h3>SIGN UP</h3></a>
+            <p>Sign up below for updates about the world of AiF@shion, including collection launches and early access to limited-edition products and collaborations.</p>
+            <input type="email" placeholder="Email">
+        </div>
+        <div>
+            <a href="#"><h3>STORE LOCATOR</h3></a>
+            <a href="#"><h3>DOWNLOAD OUR APP</h3></a>
+            <a href="#"><h3>BOOK AN APPOINTMENT</h3></a>
+        </div>
+        <div>
+            <a href="#"><h3>CUSTOMER SERVICE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;</h3></a>
+            <a href="#"><h3>LEGAL & COOKIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;</h3></a>
+            <a href="#"><h3>FOLLOW US&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;</h3></a>
+            <a href="#"><h3>OUR COMPANY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;</h3></a>
+        </div>
+        <div>
+            <a href="#"><h3>LANGUAGE</h3></a>
+            <p>English</p>
+            <a href="#"><h3>SHIPPING TO</h3></a>
+            <p>United States ($)</p>
+        </div>
+    </div>
+    <hr>
+    <p id="last-p">If you are using a screen-reader and are having problems using this website, please call <a href="#">+1877 217 4085</a> or <a href="#">contact us</a> for assistance</p>
+  </body>
+  <script>
+    let container = document.getElementById("product-display");
+    let filterby = document.getElementById("sort-by-sort-method");
+    filterby.addEventListener("change", () => {
+      fetchData();
+    });
+    async function fetchData(){
+        try{
+            let res=await fetch("https://63f6e3aa59c944921f7aff34.mockapi.io/products")
+            res=await res.json()
+            filterData(res)
+        }catch(err){
+            console.log("Error",err)
+        }
+    }
+    fetchData();
+    function filterData(data) {
+      if (filterby.value == "") {
+        displayData(data);
+      } else {
+        data = data.filter((ele) => {
+          return ele.category == filterby.value; //Please Check this and update in future.
+        });
+        displayData(data);
+      }
+    }
+    function displayData(data) {
+      container.innerHTML = null;
+      data.forEach((product) => {
+        let card = document.createElement("div");
+        let img = document.createElement("img");
+        let name = document.createElement("h4");
+        let price = document.createElement("h4");
+        let color = document.createElement("p");
+        let category = document.createElement("p");
+
+        img.src = product.image;
+        name.textContent = product.name;
+        price.textContent = `$ ${product.price}`;
+        color.textContent = product.color;
+        category.textContent = product.category;
+
+        card.append(img, name, price, color, category);
+        container.append(card);
+      });
+    }
+  </script>
+</html>

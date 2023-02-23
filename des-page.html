@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AiF@shion® Customized | British Luxury</title>
     <link rel="icon" href="./icons/Ai@FashionLogo.png" type="image/png" />
     <style>
-      * {
+        * {
         margin: 0px;
         padding: 0px;
         box-sizing: border-box;
@@ -15,16 +15,22 @@
       body {
         overflow-y: scroll;
       }
+      #brand-logo {
+        height: 140px;
+        width: 140px;
+        padding: 0px;
+        margin: 0px;
+      }
       #nav {
         width:100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
+        /* position: fixed; */
+        /* top: 0; */
+        /* left: 0; */
+        /* z-index: 1; */
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 40px;
+        /* margin-top: 40px; */
       }
       #nav-first {
         display: flex;
@@ -62,69 +68,22 @@
       #nav-list > a {
         text-decoration: none;
       }
-      video {
-        position: relative;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        background-color: transparent;
-      }
       a {
-        color: rgb(14, 180, 180);
+        color: black;
         text-decoration: none;
       }
-      #mid-section>div:nth-child(1){
-        width: 100%;
-        display: flex;
-      }
-      #mid-section>div:nth-child(1)>div{
-        width:50%;
-      }
-      #mid-section>div:nth-child(1)>div>a>img{
+      /* product description css start */
+
+
+      /* product description css end */
+      .hr-second{
         width:100%;
+        border:0.5px solid teal;
+        border-bottom: 0px;
+        margin-top:50px;
+        margin-bottom: 40px;
       }
-      #mid-section>div:nth-child(2){
-        width:100%;
-      }
-      #mid-section>div:nth-child(2)>div{
-        width:100%;
-      }
-      #mid-section>div:nth-child(2)>div>a>img{
-        width:100%;
-      }
-      #mid-section>div:nth-child(3){
-        width:100%;
-      }
-      #mid-section>div:nth-child(3)>div{
-        width:100%;
-      }
-      #mid-section>div:nth-child(3)>div>a>img{
-        width:100%;
-      }
-      #last-section{
-        width:100%;
-        height:400px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      #last-section>a{
-        color:black;
-        margin-bottom: 10px;
-      }
-      #last-section>a>h1{
-        font-weight: 500;
-      }
-      hr{
-        width:100%;
-        border:1px solid teal;
-        margin-bottom: 20px;
-      }
+      /* footer css start */
       #footer{
         width:100%;
         display: flex;
@@ -182,92 +141,64 @@
       }
       #last-p>a{
         text-decoration:underline;
+        color:teal;
       }
-      </style>
-  </head>
-  <body>
-      <!-- Navigation Bar-->
+      /* footer section ends */
+    </style>
+</head>
+<body>
     <div id="nav">
-      <div id="nav-first">
-          <div>
-          <a href="http://127.0.0.1:5500/index.html"><h1>AiF@shion</h1></a>
+        <div id="nav-first">
+            <div>
+                <a href="http://127.0.0.1:5500/index.html"
+                ><img id="brand-logo" src="./icons/Ai@FashionLogo.png" alt=""
+              /></a>
+          </div>
+          <div id="nav-list">
+            <a href="./product_page.html">GIFTS</a>
+            <a href="./product_page.html">NEW IN</a>
+            <a href="./product_page.html">WOMEN</a>
+            <a href="./product_page.html">MEN</a>
+            <a href="./product_page.html">CHILDREN</a>
+            <a href="./product_page.html">OUTERWEAR</a>
+            <a href="./product_page.html">BAGS</a>
+            <a href="./product_page.html">STORIES</a>
+            <a href="./product_page.html">VALUES</a>
+          </div>
         </div>
-        <div id="nav-list">
-          <a href="./product_page.html">GIFTS</a>
-          <a href="./product_page.html">NEW IN</a>
-          <a href="./product_page.html">WOMEN</a>
-          <a href="./product_page.html">MEN</a>
-          <a href="./product_page.html">CHILDREN</a>
-          <a href="./product_page.html">OUTERWEAR</a>
-          <a href="./product_page.html">BAGS</a>
-          <a href="./product_page.html">STORIES</a>
-          <a href="./product_page.html">VALUES</a>
+        <div id="nav-second">
+          <ul>
+            <li>
+              <button>
+                <img
+                  id="nav-search-logo"
+                  src="./icons/icons8-search-100.png"
+                  alt="Error"
+                />
+              </button>
+            </li>
+            <li>
+              <button>
+                <img src="./icons/icons8-account-64.png" alt="Error" />
+              </button>
+          </li>
+            <li>
+              <button>
+                <img src="./icons/icons8-shopping-bag-100.png" alt="Error" />
+              </button>
+            </li>
+          </ul>
         </div>
       </div>
-      <div id="nav-second">
-        <ul>
-          <li>
-            <button>
-              <img
-                id="nav-search-logo"
-                src="./icons/icons8-search-100.png"
-                alt="Error"
-              />
-            </button>
-          </li>
-          <li>
-            <button>
-              <img src="./icons/icons8-account-64.png" alt="Error" />
-            </button>
-        </li>
-          <li>
-            <button>
-              <img src="./icons/icons8-shopping-bag-100.png" alt="Error" />
-            </button>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- Navigation Bar end -->
-    <video width="100%" height="" autoplay muted loop>
-        <source src="./video/video_2023-02-22_14-22-41.mp4" type="video/mp4" />
-    </video>
-    <div id="mid-section">
-        <div>
-            <div>
-                <a href="#">
-                    <img src="https://assets.burberry.com/is/image/Burberryltd/6EB7BB45-E6DF-4A04-A268-5146FF805CE3?wid=1200" alt="#">
-                </a>
-            </div>
-            <div>
-                <a href="#">
-                    <img src="https://assets.burberry.com/is/image/Burberryltd/B16DA97B-71C9-4933-9EF6-EDFEC5C8C5DC?wid=1200" alt="#">
-                </a>
-            </div>
-        </div>
-        <div>
-            <div>
-                <a href="#">
-                    <img src="https://assets.burberry.com/is/image/Burberryltd/2AFA0CCD-EC75-4E36-9CC9-79B3133A3607?wid=1366" alt="#">
-                </a>
-            </div>
-        </div>
-        <div>
-            <div>
-                <a href="#">
-                    <img src="https://assets.burberry.com/is/image/Burberryltd/513CC023-678E-4793-925E-CEE0067DF98E?wid=1366" alt="#">
-                </a>
-            </div>
-        </div>
-    </div>
-    <div id="last-section">
-        <a href="#"><h1>CHILDREN</h1></a>
-        <a href="#"><h1>THE TRENCH COAT</h1></a>
-        <a href="#"><h1>SCARVES</h1></a>
-    </div>
 
-    <!-- Footer-section -->
-    <hr>
+      <!-- product description start -->
+
+
+      <!-- product description ends -->
+
+      <!-- footer section start -->
+      <hr class="hr-second">
+    <!-- Footer Section -->
     <div id="footer">
         <div>
             <a href="#"><h3>SIGN UP</h3></a>
@@ -294,5 +225,6 @@
     </div>
     <hr>
     <p id="last-p">If you are using a screen-reader and are having problems using this website, please call <a href="#">+1877 217 4085</a> or <a href="#">contact us</a> for assistance</p>
+  <!-- Footer section ends -->
 </body>
 </html>
