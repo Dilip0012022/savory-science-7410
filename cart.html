@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AiF@shion® Customized | British Luxury</title>
+    <link rel="icon" href="./icons/Ai@FashionLogo.png" type="image/png" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      #brand-logo-div {
+        display: flex;
+        justify-content: center;
+      }
+      #brand-logo {
+        height: 200px;
+        width: 200px;
+        padding: 0px;
+      }
+      #shopping-total {
+        display: flex;
+        justify-content: center;
+      }
+      #cart-data {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 50px;
+      }
+      #cart-details {
+        width: 57%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      #cart-details > div {
+        width: 90%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+      #cart-details > div > img {
+        width: 100%;
+      }
+      #cart-details > div > h3 {
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+      #cart-details > div button {
+        margin-left: 4px;
+        margin-right: 4px;
+        background-color: teal;
+        color: white;
+        border: 0px;
+        padding: 4px 8px;
+      }
+      #payment-details {
+        width: 37%;
+      }
+      hr.first {
+        width: 100%;
+        border: 0.5px solid teal;
+        border-bottom: 0px;
+      }
+      .firstpay {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+      #payment-details > button {
+        width: 100%;
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+      }
+      #login-button {
+        width: 100%;
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        margin-top: 30px;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      .hr-second {
+        width: 100%;
+        border: 0.5px solid teal;
+        border-bottom: 0px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+      }
+      /* footer css start */
+      #footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 40px;
+      }
+      #footer a {
+        color: black;
+      }
+      #footer h3 {
+        font-weight: 200;
+      }
+      #footer > div {
+        width: 22%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      #footer > div:nth-child(1) > a > h3 {
+        margin-bottom: 20px;
+      }
+      #footer > div:nth-child(1) > p {
+        line-height: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      #footer > div:nth-child(1) > input {
+        margin-bottom: 20px;
+        border: 0px solid red;
+        border-bottom: 1px solid black;
+        font-size: 16px;
+        width: 100%;
+        padding-bottom: 8px;
+      }
+      #footer > div:nth-child(2) > a > h3 {
+        margin-bottom: 30px;
+        padding-left: 12px;
+      }
+      #footer > div:nth-child(3) {
+        margin-left: 20px;
+      }
+      #footer > div:nth-child(3) > a > h3 {
+        margin-bottom: 30px;
+      }
+      #footer > div:nth-child(4) > a > h3 {
+        margin-bottom: 20px;
+      }
+      #footer > div:nth-child(4) > p {
+        margin-bottom: 50px;
+        font-weight: lighter;
+      }
+      #last-p {
+        margin-left: 50px;
+        margin-bottom: 40px;
+        color: teal;
+      }
+      #last-p > a {
+        text-decoration: underline;
+        color: teal;
+      }
+      /* footer section ends */
+    </style>
+  </head>
+  <body>
+    <div id="brand-logo-div">
+      <a href="http://127.0.0.1:5500/index.html"
+        ><img id="brand-logo" src="./icons/Ai@FashionLogo.png" alt=""
+      /></a>
+    </div>
+    <div id="shopping-total"><h1 id="quan-full">SHOPPING BAG</h1></div>
+    <!-- Append cart data -->
+    <div id="cart-data">
+      <div id="cart-details">
+        <hr class="first" />
+      </div>
+      <div id="payment-details">
+        <div class="firstpay">
+          <p>Subtotal</p>
+          <p id="subtotal-price">$0.00</p>
+        </div>
+        <div class="firstpay">
+          <p>Estimated Shipping</p>
+          <p>Free</p>
+        </div>
+        <div class="firstpay">
+          <p>Sales Tax</p>
+          <p>Calculated Review & Pay</p>
+        </div>
+        <hr class="first" />
+        <div class="firstpay">
+          <p>Total</p>
+          <p id="total-price">$0.00</p>
+        </div>
+        <button id="quan-checkout">CHECKOUT(0)</button>
+        <button id="login-button">LOGIN</button>
+      </div>
+    </div>
+    <hr class="hr-second" />
+    <div id="footer">
+      <div>
+        <a href="#"><h3>SIGN UP</h3></a>
+        <p>
+          Sign up below for updates about the world of AiF@shion, including
+          collection launches and early access to limited-edition products and
+          collaborations.
+        </p>
+        <input type="email" placeholder="Email" />
+      </div>
+      <div>
+        <a href="#"><h3>STORE LOCATOR</h3></a>
+        <a href="#"><h3>DOWNLOAD OUR APP</h3></a>
+        <a href="#"><h3>BOOK AN APPOINTMENT</h3></a>
+      </div>
+      <div>
+        <a href="#"
+          ><h3>
+            CUSTOMER
+            SERVICE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;
+          </h3></a
+        >
+        <a href="#"
+          ><h3>
+            LEGAL &
+            COOKIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;
+          </h3></a
+        >
+        <a href="#"
+          ><h3>
+            FOLLOW
+            US&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;
+          </h3></a
+        >
+        <a href="#"
+          ><h3>
+            OUR
+            COMPANY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;
+          </h3></a
+        >
+      </div>
+      <div>
+        <a href="#"><h3>LANGUAGE</h3></a>
+        <p>English</p>
+        <a href="#"><h3>SHIPPING TO</h3></a>
+        <p>United States ($)</p>
+      </div>
+    </div>
+    <hr />
+    <p id="last-p">
+      If you are using a screen-reader and are having problems using this
+      website, please call <a href="#">+1877 217 4085</a> or
+      <a href="#">contact us</a> for assistance
+    </p>
+  </body>
+  <script>
+    let sum;
+    let logindone=JSON.parse(localStorage.getItem("logindone"))
+    let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+    let container = document.getElementById("cart-details");
+    let checkout = document.getElementById("quan-checkout");
+    checkout.addEventListener("click", () => {
+      if (logindone) {
+        window.location.href = "./login.html";
+      } else {
+        alert("Please Login First");
+      }
+    });
+    let login=document.getElementById("login-button")
+    login.addEventListener("click",()=>{
+        window.location.href="./login.html"
+    })
+    displayData(cartData);
+    function displayData(data) {
+      container.innerHTML = null;
+      data.forEach((product) => {
+        let card = document.createElement("div");
+        let img = document.createElement("img");
+        let name = document.createElement("h3");
+        let price = document.createElement("h3");
+        let decrease = document.createElement("button");
+        let quantity = document.createElement("span");
+        let increase = document.createElement("button");
+        let remove = document.createElement("button");
+
+        img.src = product.image;
+        name.textContent = product.name;
+        price.textContent = `$ ${product.price}`;
+        decrease.textContent = "-";
+        quantity.textContent = product.quantity;
+        increase.textContent = "+";
+        remove.textContent = "Remove";
+
+        remove.addEventListener("click", () => {
+          cartData = cartData.filter((ele) => {
+            return ele.name != product.name;
+          });
+          localStorage.setItem("cartData", JSON.stringify(cartData));
+          displayData(cartData);
+        });
+        increase.addEventListener("click", () => {
+          product = product.quantity++;
+          localStorage.setItem("cartData", JSON.stringify(cartData));
+          displayData(cartData);
+        });
+        decrease.addEventListener("click", () => {
+          product = product.quantity--;
+          localStorage.setItem("cartData", JSON.stringify(cartData));
+          displayData(cartData);
+        });
+        sum = 0;
+        for (let i = 0; i < cartData.length; i++) {
+          sum += +cartData[i].price * Number(cartData[i].quantity);
+        }
+
+        document.getElementById("subtotal-price").textContent = `$ ${sum}`;
+        document.getElementById("total-price").textContent = `$ ${sum}`;
+        let count = cartData.length;
+        document.getElementById(
+          "quan-full"
+        ).textContent = `SHOPPING BAG (${count})`;
+        document.getElementById(
+          "quan-checkout"
+        ).textContent = `CHECKOUT (${count})`;
+
+        card.append(img, name, price, decrease, quantity, increase, remove);
+        container.append(card);
+      });
+    }
+  </script>
+</html>

@@ -15,6 +15,7 @@
       body {
         overflow-y: scroll;
       }
+      /* Navigation Bar CSS Start */
       #brand-logo {
         height: 140px;
         width: 140px;
@@ -23,7 +24,7 @@
       }
       #nav {
         width: 100%;
-        /* position: fixed; */
+        /* position: sticky; */
         /* top: 0; */
         /* left: 0; */
         /* z-index: 1; */
@@ -69,85 +70,11 @@
         text-decoration: none;
       }
       a {
+        /* color: rgb(14, 180, 180); */
         color: black;
         text-decoration: none;
       }
-      /* product description css start */
-      #product-des {
-        width: 90%;
-        margin: auto;
-        margin-top: 40px;
-        display: flex;
-        justify-content: space-between;
-      }
-      #product-img {
-        width: 50%;
-      }
-      #product-img > img {
-        width: 100%;
-        height: 100%;
-      }
-      #product-details {
-        width: 45%;
-      }
-      #pro-name {
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      #pro-price {
-        margin-bottom: 15px;
-      }
-      #pro-price + p {
-        color: teal;
-        margin-bottom: 20px;
-      }
-      #pro-color {
-        margin-top: 20px;
-        margin-bottom: 15px;
-      }
-      #product-details span {
-        margin-right: 25px;
-        font-size: 18px;
-        font-weight: 600;
-      }
-      hr {
-        margin-top: 20px;
-      }
-      #length {
-        margin-top: 20px;
-      }
-      #size {
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      #button {
-        width: 100%;
-        background-color: black;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        border-radius: 5px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-      .red {
-        color: red;
-      }
-      .blue {
-        color: blue;
-      }
-      #button+h3{
-        margin-bottom: 20px;
-      }
-      #pro-descri{
-        font-size:18px;
-        margin-bottom: 15px;
-      }
-      #pro-descri~p{
-        font-size:18px;
-        margin-bottom: 15px;
-      }
-      /* product description css end */
+      /* Navigation Bar CSS End */
       .hr-second {
         width: 100%;
         border: 0.5px solid teal;
@@ -155,7 +82,7 @@
         margin-top: 50px;
         margin-bottom: 40px;
       }
-      /* footer css start */
+      /* Footer CSS */
       #footer {
         width: 100%;
         display: flex;
@@ -215,7 +142,82 @@
         text-decoration: underline;
         color: teal;
       }
-      /* footer section ends */
+      /* SignUp and Login CSS Start */
+      #main-div {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+        margin-bottom: 100px;
+      }
+      #signup {
+        background-color: rgb(183, 203, 203);
+        padding: 20px 40px;
+        border-radius: 6px;
+        width: 48%;
+      }
+      #signup > h2 {
+        margin-bottom: 20px;
+      }
+      #signup > input {
+        margin-top: 12px;
+        width: 100%;
+        margin-bottom: 12px;
+        padding: 6px 12px;
+        font-size: 18px;
+      }
+      #signup > p {
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+      #signup > div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+      #signup > div > button {
+        font-size: 16px;
+        padding: 4px 100px;
+        border: 0px;
+        background-color: black;
+        color: white;
+        margin-bottom: 30px;
+      }
+      #login {
+        background-color: rgb(183, 203, 203);
+        padding: 20px 40px;
+        border-radius: 6px;
+        width: 48%;
+      }
+      #login > h2 {
+        margin-bottom: 20px;
+      }
+      #login > input {
+        margin-top: 12px;
+        width: 100%;
+        margin-bottom: 12px;
+        padding: 6px 12px;
+        font-size: 18px;
+      }
+      #login > p {
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+      #login > div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+      #login > div > button {
+        font-size: 16px;
+        padding: 4px 100px;
+        border: 0px;
+        background-color: black;
+        color: white;
+        margin-bottom: 30px;
+      }
+      /* SignUp and Login CSS End */
     </style>
   </head>
   <body>
@@ -242,57 +244,67 @@
         <ul>
           <li>
             <button>
-              <a href=""><img
-                id="nav-search-logo"
-                src="./icons/icons8-search-100.png"
-                alt="Error"
+              <a href=""
+                ><img
+                  id="nav-search-logo"
+                  src="./icons/icons8-search-100.png"
+                  alt="Error"
               /></a>
             </button>
           </li>
           <li>
             <button>
-              <a href=""><img src="./icons/icons8-account-64.png" alt="Error" /></a>
+              <a href=""
+                ><img src="./icons/icons8-account-64.png" alt="Error"
+              /></a>
             </button>
           </li>
           <li>
             <button>
-              <a href="./cart.html"><img src="./icons/icons8-shopping-bag-100.png" alt="Error" /></a>
+              <a href="./cart.html"
+                ><img src="./icons/icons8-shopping-bag-100.png" alt="Error"
+              /></a>
             </button>
           </li>
         </ul>
       </div>
     </div>
-    <div id="product-des">
-      <div id="product-img">
-        <img
-          id="pro-img" src="https://loremflickr.com/cache/resized/65535_51676223772_1e3c6eab92_b_640_480_nofilter.jpg"
-        />
-      </div>
-      <div id="product-details">
-        <h2 id="pro-name">Mid-length Kensington Heritage Trench CoatPrice</h2>
-        <h3 id="pro-price">$2,490.00</h3>
-        <p>Instalment payments available &#9432;</p>
-        <hr />
-        <h3 id="pro-color">Color : Honey</h3>
-        <span class="red">Red</span><span>Black</span
-        ><span class="blue">Blue</span>
-        <hr />
-        <h3 id="length">Length: Short Long Mid</h3>
-        <hr />
-        <h3 id="size">Size(US) : Size Chart</h3>
-        <span>44</span><span>46</span><span>48</span><span>50</span
-        ><span>52</span><span>54</span><span>56</span><span>58</span
-        ><span>60</span>
-        <h3 id="button">Add To Bag</h3>
-        <h3>Product's Details</h3>
-        <p id="pro-descri">
-          The iconic Burberry trench, made in Yorkshire from shower-resistant
-          gabardine.
+    <!-- Navigation Bar End -->
+
+    <div id="main-div">
+      <div id="signup">
+        <h2>SIGN UP</h2>
+        <label for="">Email</label>
+        <input id="signup-email" type="email" placeholder="Enter Email" />
+        <label for="">Password</label>
+        <input id="signup-pass" type="password" placeholder="Enter Password" />
+        <p>
+          This site is protected by reCAPTCHA and the Google Privacy Policy and
+          Term of Service apply
         </p>
-        <p>Coat length: 98cm/38.6in. This is based on a size IT 50.</p>
-        <p>Model’s height: 188cm/6ft 2in. Model wears size IT 50.</p>
+        <div>
+          <a href="">Forgotten Password</a>
+          <button id="signup-btn">SignUp</button>
+        </div>
+      </div>
+      <div id="login">
+        <h2>LOGIN</h2>
+        <label for="">Email</label>
+        <input id="login-email" type="email" placeholder="Enter Email" />
+        <label for="">Password</label>
+        <input id="login-pass" type="password" placeholder="Enter Password" />
+        <p>
+          This site is protected by reCAPTCHA and the Google Privacy Policy and
+          Term of Service apply
+        </p>
+        <div>
+          <a href="">Forgotten Password</a>
+          <button id="login-btn">Login</button>
+        </div>
       </div>
     </div>
+
+    <!-- Footer Section -->
     <hr class="hr-second" />
     <div id="footer">
       <div>
@@ -350,20 +362,39 @@
     </p>
   </body>
   <script>
-    let addedData=JSON.parse(localStorage.getItem("addedData"))||[]
-    let cartData=JSON.parse(localStorage.getItem("cartData"))||[]
-    let addtocart=document.getElementById("button")
-    function displayData(data){
-      document.getElementById("pro-name").textContent=data[0].name
-      document.getElementById("pro-price").textContent=`$ ${data[0].price}`
-      document.getElementById("pro-color").textContent=`Color : ${data[0].color}`
-      document.getElementById("pro-img").src=data[0].image
-      addtocart.addEventListener("click",()=>{
-        cartData.push(data[0])
-        localStorage.setItem("cartData",JSON.stringify(cartData))
-        alert(`${data[0].name} added to Cart`)
-      })
-    }
-    displayData(addedData)
+    let logindone=false
+    localStorage.setItem("logindone",JSON.stringify(logindone))
+    let signupEmail = document.getElementById("signup-email");
+    let signupPass = document.getElementById("signup-pass");
+    let signupBtn = document.getElementById("signup-btn");
+    let signupArr = JSON.parse(localStorage.getItem("signupArr")) || [];
+    signupBtn.addEventListener("click", () => {
+        let obj={
+            email:signupEmail.value,
+            password:signupPass.value
+        }
+        signupArr.push(obj)
+        localStorage.setItem("signupArr",JSON.stringify(signupArr))
+        alert("Sign Up Done Successfully")
+    });
+    let loginEmail = document.getElementById("login-email");
+    let loginPass = document.getElementById("login-pass");
+    let loginBtn = document.getElementById("login-btn");
+    loginBtn.addEventListener("click",()=>{
+        for(let i=0;i<signupArr.length;i++){
+            if(loginEmail.value==signupArr[i].email&&loginPass.value==signupArr[i].password){
+                logindone=true
+                alert("Login Done Successfully")
+                localStorage.setItem("logindone",JSON.stringify(logindone))
+                break
+            }
+        }
+        if(logindone==false){
+            alert("Wrong Credentials")
+        }
+        else{
+            window.location.href="./index.html"
+        }
+    })
   </script>
 </html>
