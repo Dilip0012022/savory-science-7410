@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AiF@shion® Customized | British Luxury</title>
+    <link rel="icon" href="./icons/Ai@FashionLogo.png" type="image/png" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        overflow-y: scroll;
+      }
+      /* Navigation Bar CSS Start */
+      #brand-logo {
+        height: 140px;
+        width: 140px;
+        padding: 0px;
+        margin: 0px;
+      }
+      #nav {
+        width: 100%;
+        /* position: sticky; */
+        /* top: 0; */
+        /* left: 0; */
+        /* z-index: 1; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* margin-top: 40px; */
+      }
+      #nav-first {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+        margin-left: 4%;
+        align-items: center;
+      }
+      #nav-second {
+        width: 10%;
+        margin-right: 4%;
+      }
+      #nav-second > ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+      }
+      #nav-second > ul > li > button > a > img {
+        width: 30px;
+        height: 30px;
+      }
+      #nav-logo {
+        height: 140px;
+        width: 140px;
+      }
+      #nav-search-logo {
+        background-color: white;
+        border: 0px solid red;
+      }
+      #nav-list {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+      #nav-list > a {
+        text-decoration: none;
+      }
+      a {
+        /* color: rgb(14, 180, 180); */
+        color: black;
+        text-decoration: none;
+      }
+      /* Navigation Bar CSS End */
+      .hr-second {
+        width: 100%;
+        border: 0.5px solid teal;
+        border-bottom: 0px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+      }
+      /* Footer CSS */
+      #footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 40px;
+      }
+      #footer a {
+        color: black;
+      }
+      #footer h3 {
+        font-weight: 200;
+      }
+      #footer > div {
+        width: 22%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      #footer > div:nth-child(1) > a > h3 {
+        margin-bottom: 20px;
+      }
+      #footer > div:nth-child(1) > p {
+        line-height: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      #footer > div:nth-child(1) > input {
+        margin-bottom: 20px;
+        border: 0px solid red;
+        border-bottom: 1px solid black;
+        font-size: 16px;
+        width: 100%;
+        padding-bottom: 8px;
+      }
+      #footer > div:nth-child(2) > a > h3 {
+        margin-bottom: 30px;
+        padding-left: 12px;
+      }
+      #footer > div:nth-child(3) {
+        margin-left: 20px;
+      }
+      #footer > div:nth-child(3) > a > h3 {
+        margin-bottom: 30px;
+      }
+      #footer > div:nth-child(4) > a > h3 {
+        margin-bottom: 20px;
+      }
+      #footer > div:nth-child(4) > p {
+        margin-bottom: 50px;
+        font-weight: lighter;
+      }
+      #last-p {
+        margin-left: 50px;
+        margin-bottom: 40px;
+        color: teal;
+      }
+      #last-p > a {
+        text-decoration: underline;
+        color: teal;
+      }
+      /* SignUp and Login CSS Start */
+      #main-div {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+        margin-bottom: 100px;
+      }
+      #signup {
+        background-color: rgb(183, 203, 203);
+        padding: 20px 40px;
+        border-radius: 6px;
+        width: 48%;
+      }
+      #signup > h2 {
+        margin-bottom: 20px;
+      }
+      #signup > input {
+        margin-top: 12px;
+        width: 100%;
+        margin-bottom: 12px;
+        padding: 6px 12px;
+        font-size: 18px;
+      }
+      #signup > p {
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+      #signup > div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+      #signup > div > button {
+        font-size: 16px;
+        padding: 4px 100px;
+        border: 0px;
+        background-color: black;
+        color: white;
+        margin-bottom: 30px;
+      }
+      #login {
+        background-color: rgb(183, 203, 203);
+        padding: 20px 40px;
+        border-radius: 6px;
+        width: 48%;
+      }
+      #login > h2 {
+        margin-bottom: 20px;
+      }
+      #login > input {
+        margin-top: 12px;
+        width: 100%;
+        margin-bottom: 12px;
+        padding: 6px 12px;
+        font-size: 18px;
+      }
+      #login > p {
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+      #login > div {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+      }
+      #login > div > button {
+        font-size: 16px;
+        padding: 4px 100px;
+        border: 0px;
+        background-color: black;
+        color: white;
+        margin-bottom: 30px;
+      }
+      /* SignUp and Login CSS End */
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <div id="nav-first">
+        <div>
+          <a href="http://127.0.0.1:5500/index.html"
+            ><img id="brand-logo" src="./icons/Ai@FashionLogo.png" alt=""
+          /></a>
+        </div>
+        <div id="nav-list">
+          <a href="./product_page.html">GIFTS</a>
+          <a href="./product_page.html">NEW IN</a>
+          <a href="./product_page.html">WOMEN</a>
+          <a href="./product_page.html">MEN</a>
+          <a href="./product_page.html">CHILDREN</a>
+          <a href="./product_page.html">OUTERWEAR</a>
+          <a href="./product_page.html">BAGS</a>
+          <a href="./product_page.html">STORIES</a>
+          <a href="./product_page.html">VALUES</a>
+        </div>
+      </div>
+      <div id="nav-second">
+        <ul>
+          <li>
+            <button>
+              <a href=""
+                ><img
+                  id="nav-search-logo"
+                  src="./icons/icons8-search-100.png"
+                  alt="Error"
+              /></a>
+            </button>
+          </li>
+          <li>
+            <button>
+              <a href=""
+                ><img src="./icons/icons8-account-64.png" alt="Error"
+              /></a>
+            </button>
+          </li>
+          <li>
+            <button>
+              <a href="./cart.html"
+                ><img src="./icons/icons8-shopping-bag-100.png" alt="Error"
+              /></a>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Navigation Bar End -->
+
+    <div id="main-div">
+      <div id="signup">
+        <h2>SIGN UP</h2>
+        <label for="">Email</label>
+        <input id="signup-email" type="email" placeholder="Enter Email" />
+        <label for="">Password</label>
+        <input id="signup-pass" type="password" placeholder="Enter Password" />
+        <p>
+          This site is protected by reCAPTCHA and the Google Privacy Policy and
+          Term of Service apply
+        </p>
+        <div>
+          <a href="">Forgotten Password</a>
+          <button id="signup-btn">SignUp</button>
+        </div>
+      </div>
+      <div id="login">
+        <h2>LOGIN</h2>
+        <label for="">Email</label>
+        <input id="login-email" type="email" placeholder="Enter Email" />
+        <label for="">Password</label>
+        <input id="login-pass" type="password" placeholder="Enter Password" />
+        <p>
+          This site is protected by reCAPTCHA and the Google Privacy Policy and
+          Term of Service apply
+        </p>
+        <div>
+          <a href="">Forgotten Password</a>
+          <button id="login-btn">Login</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <hr class="hr-second" />
+    <div id="footer">
+      <div>
+        <a href="#"><h3>SIGN UP</h3></a>
+        <p>
+          Sign up below for updates about the world of AiF@shion, including
+          collection launches and early access to limited-edition products and
+          collaborations.
+        </p>
+        <input type="email" placeholder="Email" />
+      </div>
+      <div>
+        <a href="#"><h3>STORE LOCATOR</h3></a>
+        <a href="#"><h3>DOWNLOAD OUR APP</h3></a>
+        <a href="#"><h3>BOOK AN APPOINTMENT</h3></a>
+      </div>
+      <div>
+        <a href="#"
+          ><h3>
+            CUSTOMER
+            SERVICE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;
+          </h3></a
+        >
+        <a href="#"
+          ><h3>
+            LEGAL &
+            COOKIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;
+          </h3></a
+        >
+        <a href="#"
+          ><h3>
+            FOLLOW
+            US&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;
+          </h3></a
+        >
+        <a href="#"
+          ><h3>
+            OUR
+            COMPANY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;
+          </h3></a
+        >
+      </div>
+      <div>
+        <a href="#"><h3>LANGUAGE</h3></a>
+        <p>English</p>
+        <a href="#"><h3>SHIPPING TO</h3></a>
+        <p>United States ($)</p>
+      </div>
+    </div>
+    <hr />
+    <p id="last-p">
+      If you are using a screen-reader and are having problems using this
+      website, please call <a href="#">+1877 217 4085</a> or
+      <a href="#">contact us</a> for assistance
+    </p>
+  </body>
+  <script>
+    let logindone=false
+    localStorage.setItem("logindone",JSON.stringify(logindone))
+    let signupEmail = document.getElementById("signup-email");
+    let signupPass = document.getElementById("signup-pass");
+    let signupBtn = document.getElementById("signup-btn");
+    let signupArr = JSON.parse(localStorage.getItem("signupArr")) || [];
+    signupBtn.addEventListener("click", () => {
+        let obj={
+            email:signupEmail.value,
+            password:signupPass.value
+        }
+        signupArr.push(obj)
+        localStorage.setItem("signupArr",JSON.stringify(signupArr))
+        alert("Sign Up Done Successfully")
+    });
+    let loginEmail = document.getElementById("login-email");
+    let loginPass = document.getElementById("login-pass");
+    let loginBtn = document.getElementById("login-btn");
+    loginBtn.addEventListener("click",()=>{
+        for(let i=0;i<signupArr.length;i++){
+            if(loginEmail.value==signupArr[i].email&&loginPass.value==signupArr[i].password){
+                logindone=true
+                alert("Login Done Successfully")
+                localStorage.setItem("logindone",JSON.stringify(logindone))
+                break
+            }
+        }
+        if(logindone==false){
+            alert("Wrong Credentials")
+        }
+        else{
+            window.location.href="./index.html"
+        }
+    })
+  </script>
+</html>

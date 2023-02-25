@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AiF@shion® Customized | British Luxury</title>
+    <link rel="icon" href="./icons/Ai@FashionLogo.png" type="image/png" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        overflow-y: scroll;
+      }
+      #brand-logo {
+        height: 140px;
+        width: 140px;
+        padding: 0px;
+        margin: 0px;
+      }
+      #nav {
+        width: 100%;
+        /* position: fixed; */
+        /* top: 0; */
+        /* left: 0; */
+        /* z-index: 1; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* margin-top: 40px; */
+      }
+      #nav-first {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+        margin-left: 4%;
+        align-items: center;
+      }
+      #nav-second {
+        width: 10%;
+        margin-right: 4%;
+      }
+      #nav-second > ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+      }
+      #nav-second > ul > li > button > a > img {
+        width: 30px;
+        height: 30px;
+      }
+      #nav-logo {
+        height: 140px;
+        width: 140px;
+      }
+      #nav-search-logo {
+        background-color: white;
+        border: 0px solid red;
+      }
+      #nav-list {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+      #nav-list > a {
+        text-decoration: none;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      /* product description css start */
+      #product-des {
+        width: 90%;
+        margin: auto;
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+      }
+      #product-img {
+        width: 50%;
+      }
+      #product-img > img {
+        width: 100%;
+        height: 100%;
+      }
+      #product-details {
+        width: 45%;
+      }
+      #pro-name {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      #pro-price {
+        margin-bottom: 15px;
+      }
+      #pro-price + p {
+        color: teal;
+        margin-bottom: 20px;
+      }
+      #pro-color {
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+      #product-details span {
+        margin-right: 25px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      hr {
+        margin-top: 20px;
+      }
+      #length {
+        margin-top: 20px;
+      }
+      #size {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      #button {
+        width: 100%;
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        border-radius: 5px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+      #button+h3{
+        margin-bottom: 20px;
+      }
+      #pro-descri{
+        font-size:18px;
+        margin-bottom: 15px;
+      }
+      #pro-descri~p{
+        font-size:18px;
+        margin-bottom: 15px;
+      }
+      /* product description css end */
+      .hr-second {
+        width: 100%;
+        border: 0.5px solid teal;
+        border-bottom: 0px;
+        margin-top: 50px;
+        margin-bottom: 40px;
+      }
+      /* footer css start */
+      #footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 40px;
+      }
+      #footer a {
+        color: black;
+      }
+      #footer h3 {
+        font-weight: 200;
+      }
+      #footer > div {
+        width: 22%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      #footer > div:nth-child(1) > a > h3 {
+        margin-bottom: 20px;
+      }
+      #footer > div:nth-child(1) > p {
+        line-height: 20px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      #footer > div:nth-child(1) > input {
+        margin-bottom: 20px;
+        border: 0px solid red;
+        border-bottom: 1px solid black;
+        font-size: 16px;
+        width: 100%;
+        padding-bottom: 8px;
+      }
+      #footer > div:nth-child(2) > a > h3 {
+        margin-bottom: 30px;
+        padding-left: 12px;
+      }
+      #footer > div:nth-child(3) {
+        margin-left: 20px;
+      }
+      #footer > div:nth-child(3) > a > h3 {
+        margin-bottom: 30px;
+      }
+      #footer > div:nth-child(4) > a > h3 {
+        margin-bottom: 20px;
+      }
+      #footer > div:nth-child(4) > p {
+        margin-bottom: 50px;
+        font-weight: lighter;
+      }
+      #last-p {
+        margin-left: 50px;
+        margin-bottom: 40px;
+        color: teal;
+      }
+      #last-p > a {
+        text-decoration: underline;
+        color: teal;
+      }
+      /* footer section ends */
+    </style>
+  </head>
+  <body>
+    <div id="nav">
+      <div id="nav-first">
+        <div>
+          <a href="http://127.0.0.1:5500/index.html"
+            ><img id="brand-logo" src="./icons/Ai@FashionLogo.png" alt=""
+          /></a>
+        </div>
+        <div id="nav-list">
+          <a href="./product_page.html">GIFTS</a>
+          <a href="./product_page.html">NEW IN</a>
+          <a href="./product_page.html">WOMEN</a>
+          <a href="./product_page.html">MEN</a>
+          <a href="./product_page.html">CHILDREN</a>
+          <a href="./product_page.html">OUTERWEAR</a>
+          <a href="./product_page.html">BAGS</a>
+          <a href="./product_page.html">STORIES</a>
+          <a href="./product_page.html">VALUES</a>
+        </div>
+      </div>
+      <div id="nav-second">
+        <ul>
+          <li>
+            <button>
+              <a href=""><img
+                id="nav-search-logo"
+                src="./icons/icons8-search-100.png"
+                alt="Error"
+              /></a>
+            </button>
+          </li>
+          <li>
+            <button>
+              <a href=""><img src="./icons/icons8-account-64.png" alt="Error" /></a>
+            </button>
+          </li>
+          <li>
+            <button>
+              <a href="./cart.html"><img src="./icons/icons8-shopping-bag-100.png" alt="Error" /></a>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="product-des">
+      <div id="product-img">
+        <img
+          id="pro-img" src="https://loremflickr.com/cache/resized/65535_51676223772_1e3c6eab92_b_640_480_nofilter.jpg"
+        />
+      </div>
+      <div id="product-details">
+        <h2 id="pro-name">Mid-length Kensington Heritage Trench CoatPrice</h2>
+        <h3 id="pro-price">$2,490.00</h3>
+        <p>Instalment payments available &#9432;</p>
+        <hr />
+        <h3 id="pro-color">Color : Honey</h3>
+        <span class="red">Red</span><span>Black</span
+        ><span class="blue">Blue</span>
+        <hr />
+        <h3 id="length">Length: Short Long Mid</h3>
+        <hr />
+        <h3 id="size">Size(US) : Size Chart</h3>
+        <span>44</span><span>46</span><span>48</span><span>50</span
+        ><span>52</span><span>54</span><span>56</span><span>58</span
+        ><span>60</span>
+        <h3 id="button">Add To Bag</h3>
+        <h3>Product's Details</h3>
+        <p id="pro-descri">
+          The iconic Burberry trench, made in Yorkshire from shower-resistant
+          gabardine.
+        </p>
+        <p>Coat length: 98cm/38.6in. This is based on a size IT 50.</p>
+        <p>Model’s height: 188cm/6ft 2in. Model wears size IT 50.</p>
+      </div>
+    </div>
+    <hr class="hr-second" />
+    <div id="footer">
+      <div>
+        <a href="#"><h3>SIGN UP</h3></a>
+        <p>
+          Sign up below for updates about the world of AiF@shion, including
+          collection launches and early access to limited-edition products and
+          collaborations.
+        </p>
+        <input type="email" placeholder="Email" />
+      </div>
+      <div>
+        <a href="#"><h3>STORE LOCATOR</h3></a>
+        <a href="#"><h3>DOWNLOAD OUR APP</h3></a>
+        <a href="#"><h3>BOOK AN APPOINTMENT</h3></a>
+      </div>
+      <div>
+        <a href="#"
+          ><h3>
+            CUSTOMER
+            SERVICE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;
+          </h3></a
+        >
+        <a href="#"
+          ><h3>
+            LEGAL &
+            COOKIES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;
+          </h3></a
+        >
+        <a href="#"
+          ><h3>
+            FOLLOW
+            US&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;
+          </h3></a
+        >
+        <a href="#"
+          ><h3>
+            OUR
+            COMPANY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&or;
+          </h3></a
+        >
+      </div>
+      <div>
+        <a href="#"><h3>LANGUAGE</h3></a>
+        <p>English</p>
+        <a href="#"><h3>SHIPPING TO</h3></a>
+        <p>United States ($)</p>
+      </div>
+    </div>
+    <hr />
+    <p id="last-p">
+      If you are using a screen-reader and are having problems using this
+      website, please call <a href="#">+1877 217 4085</a> or
+      <a href="#">contact us</a> for assistance
+    </p>
+  </body>
+  <script>
+    let addedData=JSON.parse(localStorage.getItem("addedData"))||[]
+    let cartData=JSON.parse(localStorage.getItem("cartData"))||[]
+    let addtocart=document.getElementById("button")
+    function displayData(data){
+      document.getElementById("pro-name").textContent=data[0].name
+      document.getElementById("pro-price").textContent=`$ ${data[0].price}`
+      document.getElementById("pro-color").textContent=`Color : ${data[0].color}`
+      document.getElementById("pro-img").src=data[0].image
+      addtocart.addEventListener("click",()=>{
+        cartData.push(data[0])
+        localStorage.setItem("cartData",JSON.stringify(cartData))
+        alert(`${data[0].name} added to Cart`)
+      })
+    }
+    displayData(addedData)
+  </script>
+</html>
