@@ -25,8 +25,11 @@
         display: flex;
         justify-content: center;
       }
+      #quan-full-review {
+        color: teal;
+      }
       #cart-data {
-        width: 90%;
+        width: 80%;
         display: flex;
         justify-content: space-between;
         margin: auto;
@@ -34,29 +37,37 @@
       }
       #cart-details {
         width: 57%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        background-color: rgb(217, 233, 233);
+        border-radius: 8px;
+        padding: 4px 8px;
       }
       #cart-details > div {
         width: 90%;
-        text-align: center;
+        /* text-align: center; */
+        margin-left: 10px;
         margin-top: 20px;
         margin-bottom: 30px;
       }
-      #cart-details > div > img {
+      #cart-details > div > input {
         width: 100%;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        border: 0px;
+        padding: 4px 8px;
+        font-size: 15px;
+        font-weight: 400;
+        border-radius: 4px;
       }
-      #cart-details > div > h3 {
+      #cart-details > div > select {
+        display: block;
+        width: 100%;
         margin-top: 12px;
-        margin-bottom: 12px;
-      }
-      #cart-details > div button {
-        margin-left: 4px;
-        margin-right: 4px;
         background-color: teal;
         color: white;
         border: 0px;
-        padding: 4px 8px;
+        padding: 5px 10px;
+        font-size: 16px;
+        border-radius: 4px;
       }
       #payment-details {
         width: 37%;
@@ -165,11 +176,33 @@
         ><img id="brand-logo" src="./icons/Ai@FashionLogo.png" alt=""
       /></a>
     </div>
-    <div id="shopping-total"><h1 id="quan-full">SHOPPING BAG</h1></div>
-    <!-- Append cart data -->
+    <div id="shopping-total">
+      <h3 id="quan-full">
+        SHIPPING &nbsp;&nbsp;&nbsp;<span id="quan-full-review">
+          > &nbsp;&nbsp;&nbsp; REVIEW & PAY</span
+        >
+      </h3>
+    </div>
     <div id="cart-data">
       <div id="cart-details">
-        <hr class="first" />
+        <!-- <hr class="first" /> -->
+        <div>
+          <label for="">Email</label>
+          <input id="input-email" type="email" placeholder="Enter Email" />
+          <label for="">Mobile</label>
+          <input id="input-mobile" type="number" placeholder="Enter Mobile" />
+          <label for="">Pincode</label>
+          <input id="input-pincode" type="number" placeholder="Enter Pincode" />
+          <label for="">Address</label>
+          <input id="input-address" type="text" placeholder="Enter Address" />
+          <select name="" id="pay-method">
+            <option value="">Payment Method</option>
+            <option value="Paytm">Paytm</option>
+            <option value="UPI">UPI</option>
+            <option value="Debit Card">Debit Card</option>
+            <option value="Credit Card">Credit Card</option>
+          </select>
+        </div>
       </div>
       <div id="payment-details">
         <div class="firstpay">
@@ -189,8 +222,7 @@
           <p>Total</p>
           <p id="total-price">$0.00</p>
         </div>
-        <button id="quan-checkout">CHECKOUT(0)</button>
-        <button id="login-button">LOGIN</button>
+        <button id="quan-checkout">PAY</button>
       </div>
     </div>
     <hr class="hr-second" />
@@ -250,79 +282,17 @@
     </p>
   </body>
   <script>
-    let sum,count;
-    let logindone=JSON.parse(localStorage.getItem("logindone"))
-    let cartData = JSON.parse(localStorage.getItem("cartData")) || [];
-    let container = document.getElementById("cart-details");
-    let checkout = document.getElementById("quan-checkout");
-    checkout.addEventListener("click", () => {
-      let obj1={
-        sum:sum,
-        quantity:count
-      }
-      localStorage.setItem("pay-details",JSON.stringify(obj1))
-      window.location.href="./payment.html"
-    });
-    let login=document.getElementById("login-button")
-    login.addEventListener("click",()=>{
-        window.location.href="./login.html"
+    let paydetails=JSON.parse(localStorage.getItem("pay-details"))
+    let email=document.getElementById("input-email")
+    let mobile=document.getElementById("input-mobile")
+    let pincode=document.getElementById("input-pincode")
+    let address=document.getElementById("input-address")
+    let paymethod=document.getElementById("pay-method")
+    document.getElementById("subtotal-price").textContent=`$ ${paydetails.sum}`
+    document.getElementById("total-price").textContent=`$ ${paydetails.sum}`
+    document.getElementById("quan-checkout").addEventListener("click",()=>{
+        alert(`Thank You for shopping with us.\nYour Payment of $ ${paydetails.sum} through ${paymethod.value} is done.\nYour Package of ${paydetails.quantity} items will be delivered to ${address.value} as soon as Possible.\nDetails regarding Same will be sent to your Email: ${email.value} and your Mobile: ${mobile.value}.\n We are redirecting you to Home Page for furthur Shopping. Thank you.`)
+        window.location.href="./index.html"
     })
-    displayData(cartData);
-    function displayData(data) {
-      container.innerHTML = null;
-      data.forEach((product) => {
-        let card = document.createElement("div");
-        let img = document.createElement("img");
-        let name = document.createElement("h3");
-        let price = document.createElement("h3");
-        let decrease = document.createElement("button");
-        let quantity = document.createElement("span");
-        let increase = document.createElement("button");
-        let remove = document.createElement("button");
-
-        img.src = product.image;
-        name.textContent = product.name;
-        price.textContent = `$ ${product.price}`;
-        decrease.textContent = "-";
-        quantity.textContent = product.quantity;
-        increase.textContent = "+";
-        remove.textContent = "Remove";
-
-        remove.addEventListener("click", () => {
-          cartData = cartData.filter((ele) => {
-            return ele.name != product.name;
-          });
-          localStorage.setItem("cartData", JSON.stringify(cartData));
-          displayData(cartData);
-        });
-        increase.addEventListener("click", () => {
-          product = product.quantity++;
-          localStorage.setItem("cartData", JSON.stringify(cartData));
-          displayData(cartData);
-        });
-        decrease.addEventListener("click", () => {
-          product = product.quantity--;
-          localStorage.setItem("cartData", JSON.stringify(cartData));
-          displayData(cartData);
-        });
-        sum = 0;
-        for (let i = 0; i < cartData.length; i++) {
-          sum += +cartData[i].price * Number(cartData[i].quantity);
-        }
-
-        document.getElementById("subtotal-price").textContent = `$ ${sum}`;
-        document.getElementById("total-price").textContent = `$ ${sum}`;
-        count = cartData.length;
-        document.getElementById(
-          "quan-full"
-        ).textContent = `SHOPPING BAG (${count})`;
-        document.getElementById(
-          "quan-checkout"
-        ).textContent = `CHECKOUT (${count})`;
-
-        card.append(img, name, price, decrease, quantity, increase, remove);
-        container.append(card);
-      });
-    }
   </script>
 </html>
